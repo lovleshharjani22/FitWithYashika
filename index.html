@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWithYashika - Science-Backed Fitness & Nutrition for Sustainable Weight Loss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for smooth scrolling and fonts */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Default body font */
+            background-color: #f8f8f8;
+            /* Very light gray/off-white background */
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            /* Headings font */
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            /* Lighter scrollbar */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+        /* Fade-in animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Accordion styles */
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background-color: #ffffff;
+            /* White background for FAQ headers */
+            border-radius: 0.75rem;
+            /* More rounded */
+            font-weight: 600;
+            color: #333333;
+            /* Darker text */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            /* Subtle shadow */
+        }
+
+        .accordion-header:hover {
+            background-color: #f0f0f0;
+            /* Lighter hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1.5rem;
+            background-color: #ffffff;
+            border-radius: 0 0 0.75rem 0.75rem;
+            color: #555555;
+            /* Medium gray text */
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+            /* Adjust as needed for content height */
+            padding: 1rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            /* Subtle shadow for open content */
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon.rotate {
+            transform: rotate(180deg);
+        }
+
+        /* Custom yellow blob for hero section */
+        .hero-blob {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            /* Adjust size as needed */
+            height: 100%;
+            background-color: #FFD700;
+            /* Gold/Yellow color */
+            border-bottom-left-radius: 50%;
+            /* Creates the blob shape */
+            z-index: 0;
+            transform: translateX(20%);
+            /* Push it slightly off-screen */
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .hero-blob {
+                width: 100%;
+                height: 50%;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 50%;
+                transform: translateY(0);
+                top: auto;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#home"
+                class="text-2xl font-bold text-gray-900 rounded-md p-2 hover:text-yellow-500 transition-colors duration-300">FitWithYashika</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">Home</a>
+                <a href="#about"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">About</a>
+                <a href="#plan-of-action"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">What
+                    You Get</a>
+                <a href="#programs"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">Programs</a>
+                <a href="#client-reviews"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">Client
+                    Reviews</a>
+                <a href="#bmi-calculator"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">BMI
+                    Calculator</a>
+                <a href="#ideal-weight-calculator"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">Ideal
+                    Weight</a>
+                <a href="#blog"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">Blog</a>
+                <a href="#faq"
+                    class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 rounded-md p-2">FAQ</a>
+                <a href="#contact"
+                    class="bg-yellow-500 text-gray-900 px-5 py-2 rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">Book
+                    a Call</a>
+            </div>
+            <button id="mobile-menu-button"
+                class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-md p-2">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8">
+            <button id="close-mobile-menu"
+                class="absolute top-6 right-6 text-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-md p-2">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <a href="#home"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">Home</a>
+            <a href="#about"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">About</a>
+            <a href="#plan-of-action"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">What You Get</a>
+            <a href="#programs"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">Programs</a>
+            <a href="#client-reviews"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">Client Reviews</a>
+            <a href="#bmi-calculator"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">BMI Calculator</a>
+            <a href="#ideal-weight-calculator"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">Ideal Weight</a>
+            <a href="#blog"
+                class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">Blog</a>
+            <a href="#faq" class="text-3xl text-gray-800 hover:text-yellow-500 font-bold transition-colors duration-300"
+                onclick="hideMobileMenu()">FAQ</a>
+            <a href="#contact"
+                class="bg-yellow-500 text-gray-900 px-8 py-4 text-2xl rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105"
+                onclick="hideMobileMenu()">Book a Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative bg-white py-20 md:py-32 overflow-hidden">
+            <div class="hero-blob"></div>
+            <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10 px-4">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 pr-0 md:pr-12">
+                    <p class="text-xl text-gray-700 font-medium mb-4 animate-fade-in-down">Hi There!</p>
+                    <h1
+                        class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900 animate-fade-in-down">
+                        Lose Fat, Gain Strength & <span class="text-yellow-500">Feel Like Yourself Again.</span>
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl mb-10 max-w-xl mx-auto md:mx-0 text-gray-700 opacity-90 animate-fade-in-up">
+                        Transform your body and mind with evidence-based strategies for sustainable results. No fads,
+                        just facts.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#programs"
+                            class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 inline-block">Explore
+                            Programs</a>
+                        <a href="#contact"
+                            class="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105 inline-block">Book
+                            a Free Call</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center relative">
+                    <img src="https://placehold.co/400x500/FFD700/FFFFFF?text=Yashika+Hero" alt="Yashika Fitness Expert"
+                        class="w-full max-w-md h-auto rounded-xl shadow-2xl z-10 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-8 bg-gray-100 shadow-inner">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-600 text-lg mb-4">Trusted by hundreds for sustainable weight loss and metabolic
+                    health:</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <img src="https://placehold.co/120x40/E0E0E0/6B7280?text=Health+Mag" alt="Health Magazine"
+                        class="h-10 opacity-75 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/E0E0E0/6B7280?text=Fitness+Daily" alt="Fitness Daily"
+                        class="h-10 opacity-75 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/E0E0E0/6B7280?text=Wellness+Today" alt="Wellness Today"
+                        class="h-10 opacity-75 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/E0E0E0/6B7280?text=Nutrition+Pro" alt="Nutrition Pro"
+                        class="h-10 opacity-75 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Our Core Offerings for Your
+                    Transformation</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-weight-scale text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Sustainable Weight Loss</h3>
+                        <p class="text-gray-600">Lose fat and keep it off with science-backed strategies that focus on
+                            metabolism and sustainable habits, not restrictive diets.</p>
+                    </div>
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-dumbbell text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Strength & Joint Health</h3>
+                        <p class="text-gray-600">Build a stronger body, improve joint stability, and enhance bone
+                            density with personalized workout plans designed for long-term health.</p>
+                    </div>
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <i class="fas fa-apple-alt text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Optimized Nutrition</h3>
+                        <p class="text-gray-600">Fuel your body with nutrient-dense foods to boost energy, improve
+                            recovery, and support overall well-being, without feeling deprived.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Your Action Plan for Transformation -->
+        <section id="plan-of-action" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Your Action Plan for Transformation: What
+                    You Get</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Simple, Sustainable Nutrition Plans -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center">
+                        <i class="fas fa-bowl-food text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Simple, Sustainable Nutrition Plans</h3>
+                        <p class="text-gray-600">Enjoy easy-to-follow nutrition plans that fuel your body, taste great,
+                            and integrate seamlessly into your lifestyle for lasting results.</p>
+                    </div>
+                    <!-- Card 2: Weekly 1-on-1 Training Sessions -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center">
+                        <i class="fas fa-person-running text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Weekly 1-on-1 Training Sessions</h3>
+                        <p class="text-gray-600">Receive personalized coaching during a dedicated training session each
+                            week, ensuring proper form and maximizing your effort.</p>
+                    </div>
+                    <!-- Card 3: Fully Customized Workout Plan -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center">
+                        <i class="fas fa-clipboard-list text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Fully Customized Workout Plan</h3>
+                        <p class="text-gray-600">Receive a workout plan meticulously crafted to your fitness level,
+                            goals, and available equipment (gym or home).</p>
+                    </div>
+                    <!-- Card 4: Bi-Weekly Progress Check-ins -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center">
+                        <i class="fas fa-chart-line text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Bi-Weekly Progress Check-ins</h3>
+                        <p class="text-gray-600">Dedicated calls every two weeks to review your progress, celebrate
+                            wins, and adjust your plan for continuous, optimal results.</p>
+                    </div>
+                    <!-- Card 5: Direct WhatsApp Support -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center">
+                        <i class="fab fa-whatsapp text-5xl text-yellow-500 mb-6"></i>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Direct WhatsApp Support</h3>
+                        <p class="text-gray-600">Enjoy direct support via WhatsApp throughout your program for quick
+                            questions, consistent accountability, and daily motivation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">About FitWithYashika: Your Journey, My
+                    Mission</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://placehold.co/300x300/F0F0F0/333333?text=Yashika" alt="Yashika"
+                            class="rounded-full w-48 h-48 mx-auto object-cover shadow-lg border-4 border-yellow-300">
+                        <p class="text-gray-600 text-sm mt-2">Yashika, Weight Loss Expert & Health Coach</p>
+                    </div>
+                    <div class="md:w-2/3 text-left">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Hi, I'm Yashika, and I founded FitWithYashika to cut through the noise and confusion in the
+                            fitness industry. I know what it feels like to be stuck, to try countless diets, and to feel
+                            like your body is working against you. That's why my mission is to empower you with
+                            accurate, evidence-based information and practical strategies to achieve your health and
+                            fitness goals, without deprivation or endless cardio.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            No starvation diets, no toxic fitness culture—just a supportive, science-backed path to
+                            feeling like yourself again.
+                        </p>
+                        <div class="text-center md:text-left mt-8">
+                            <a href="#contact"
+                                class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 inline-block">Start
+                                Your Journey With Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Transformative Programs:
+                    Your Path to Lasting Change</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=4+Week+Fat+Loss"
+                            alt="Nutrition Plan, Transformation Program"
+                            class="w-full h-auto rounded-lg object-cover mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Nutrition Plan, Transformation Program</h3>
+                        <p class="text-gray-700 mb-4">
+                            **Who it's for:** If you're ready to transform sustainably without feeling deprived or
+                            hating your life, this focused 4-week program is your perfect starting point!
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1 flex-grow">
+                            <li>**Personalized Goal Setting & Consultation Call:** Define your vision and get expert
+                                guidance from Yashika.</li>
+                            <li>**Progress Check-in Calls every two weeks:** Review your progress and adjust your plan
+                                for optimal results.</li>
+                            <li>**1 Weekly 1-on-1 Online Training Session:** Get personalized coaching and maximize your
+                                workout effectiveness.</li>
+                            <li>**Customized 4-Week Diet Plan:** Enjoy meals tailored to your preferences, with calories
+                                & macros precisely counted for results.</li>
+                            <li>**Direct WhatsApp Support (Mon-Fri):** Get immediate answers, accountability, and
+                                motivation throughout your program.</li>
+                            <li>**Tailored Training Program (Gym or Home):** Workouts designed to fit your lifestyle and
+                                maximize fat burning and strength.</li>
+                            <li>**Effective Progress Tracking:** Monitor your journey and celebrate every milestone with
+                                clear, actionable insights.</li>
+                            <li>**20+ Delicious Weight Loss Recipes:** Discover tasty, simple Indian meals that make
+                                healthy eating enjoyable.</li>
+                        </ul>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Embark on this journey with me, and I will help you lose weight, gain boundless energy, and
+                            build unwavering confidence with a proven, science-backed approach.
+                        </p>
+                        <p class="text-xl font-bold text-yellow-500 mb-6">₹5,799</p>
+                        <a href="#contact"
+                            class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-center">Join
+                            the 4-Week Kickstart</a>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=12+Week+Transform"
+                            alt="12-Week Transformation Program"
+                            class="w-full h-auto rounded-lg object-cover mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">The 12-Week Ultimate Transformation: Conquer
+                            Stubborn Fat & Thrive</h3>
+                        <p class="text-gray-700 mb-4">
+                            **Who it's for:** Have you tried countless diets and workouts, but still can't seem to lose
+                            that stubborn fat? This comprehensive 12-week program is designed to help you finally become
+                            the best version of yourself!
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1 flex-grow">
+                            <li>**In-depth Goal Setting & Initial Consultation Call:** Lay the foundation for your
+                                success with a clear roadmap.</li>
+                            <li>**Bi-weekly 1:1 Progress Tracking Calls with Yashika:** Receive personalized feedback,
+                                adjustments, and motivation every step of the way.</li>
+                            <li>**1 Weekly 1-on-1 Online Training Session:** Experience personalized guidance to
+                                accelerate your strength and fat loss.</li>
+                            <li>**Fully Customized Diet Plan:** Enjoy a flexible, delicious plan with calories & macros
+                                precisely counted, including your favorite Indian meals.</li>
+                            <li>**Direct WhatsApp Support (Mon-Fri):** Enjoy continuous support, accountability, and
+                                motivation directly from Yashika.</li>
+                            <li>**Advanced Customized Training Program:** Whether gym or home-based, your workouts will
+                                be optimized for maximum fat loss and muscle gain.</li>
+                            <li>**Robust Progress Tracking & Accountability Tool:** Stay on track and motivated with a
+                                system designed for consistent results.</li>
+                            <li>**20+ Tasty Weight Loss Recipes:** Expand your culinary horizons with easy, healthy, and
+                                delicious meal ideas.</li>
+                        </ul>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            This is more than just a program; it's a complete lifestyle overhaul. Get ready to transform
+                            your body, boost your energy, and build lasting confidence with a truly science-backed
+                            approach.
+                        </p>
+                        <p class="text-xl font-bold text-gray-500 line-through">₹18,999</p>
+                        <p class="text-2xl font-bold text-yellow-500 mb-6">₹14,999</p>
+                        <a href="#contact"
+                            class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-center">Enroll
+                            in the 12-Week Program</a>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=Personalized+Nutrition"
+                            alt="Personalized Nutrition Plan"
+                            class="w-full h-auto rounded-lg object-cover mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Personalized Nutrition Plan: Eat Smart, Feel
+                            Great, See Results</h3>
+                        <p class="text-gray-700 mb-4">
+                            **Who it's for:** Tired of bland, restrictive diets and not seeing results? Get your
+                            personalized nutrition plan that includes your favorite foods and fuels your body
+                            effectively!
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1 flex-grow">
+                            <li>**Detailed Nutrition Needs Assessment Call:** We'll dive deep to understand your unique
+                                dietary preferences, goals, and challenges.</li>
+                            <li>**Regular Progress Check-ins:** Monitor your dietary adherence and how it impacts your
+                                energy and body composition.</li>
+                            <li>**Customized 4-Week Diet Plan:** A flexible and delicious plan designed specifically for
+                                you, ensuring you enjoy what you eat.</li>
+                            <li>**Precise Calories & Macros Counted Meals:** Take the guesswork out of nutrition with a
+                                plan that aligns with your specific goals.</li>
+                            <li>**Direct WhatsApp Support (Mon-Fri):** Get ongoing support, questions answered, and stay
+                                motivated on your nutrition journey.</li>
+                            <li>**20+ Tasty Weight Loss Recipes:** Discover a variety of healthy, simple Indian meals
+                                that fit your plan and satisfy your taste buds.</li>
+                        </ul>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            You are what you eat! Nourish your body with tasty and healthy food that gets results. Take
+                            your first delicious step towards a better, more energized you.
+                        </p>
+                        <p class="text-xl font-bold text-gray-500 line-through">₹4,999</p>
+                        <p class="text-2xl font-bold text-yellow-500 mb-6">₹3,999+</p>
+                        <a href="#contact"
+                            class="bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-center">Get
+                            Your Nutrition Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="client-reviews" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Real Transformations, Real People</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                    Don't just take our word for it. See the incredible results our clients have achieved by embracing a
+                    science-backed approach to their health and fitness.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <div class="flex space-x-4 mb-4">
+                            <img src="https://placehold.co/150x150/F0F0F0/333333?text=Before" alt="Client Before"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-gray-300">
+                            <img src="https://placehold.co/150x150/FFD700/333333?text=After" alt="Client After"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-yellow-500">
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"I lost 15kg and finally understand how to eat for my body.
+                            Yashika's approach is life-changing!"</p>
+                        <p class="font-semibold text-yellow-600">- Sarah L.</p>
+                        <p class="text-sm text-gray-500">Lost 15kg & reversed PCOS symptoms in 3 months</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <div class="flex space-x-4 mb-4">
+                            <img src="https://placehold.co/150x150/F0F0F0/333333?text=Before" alt="Client Before"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-gray-300">
+                            <img src="https://placehold.co/150x150/FFD700/333333?text=After" alt="Client After"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-yellow-500">
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"My energy levels are through the roof, and I'm stronger
+                            than ever. No more restrictive diets!"</p>
+                        <p class="font-semibold text-yellow-600">- Mark T.</p>
+                        <p class="text-sm text-gray-500">Gained 5kg muscle & boosted energy</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg flex flex-col items-center">
+                        <div class="flex space-x-4 mb-4">
+                            <img src="https://placehold.co/150x150/F0F0F0/333333?text=Before" alt="Client Before"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-gray-300">
+                            <img src="https://placehold.co/150x150/FFD700/333333?text=After" alt="Client After"
+                                class="w-24 h-24 rounded-full object-cover border-2 border-yellow-500">
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"Yashika helped me understand my metabolism. I'm finally
+                            losing weight without feeling deprived."</p>
+                        <p class="font-semibold text-yellow-600">- Jessica R.</p>
+                        <p class="text-sm text-gray-500">Achieved metabolic flexibility & lost 10kg</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#contact"
+                        class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">Start
+                        Your Own Transformation</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="lead-magnet" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Unlock Your Metabolic Potential!</h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-700 opacity-90">
+                    Discover **"The Real Reason You're Not Losing Fat: Your Free Metabolic Reset Blueprint."**
+                    Get instant access to the secrets of a healthy metabolism and kickstart your weight loss journey.
+                </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-gray-800">
+                    <h3 class="text-2xl font-bold mb-4">Download Your Free Blueprint Now!</h3>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your best email here"
+                            class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                            required>
+                        <button type="submit"
+                            class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 w-full">
+                            Get My Free Blueprint <i class="fas fa-download ml-2"></i>
+                        </button>
+                    </form>
+                    <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bmi-calculator" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Calculate Your BMI</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Understand your Body Mass Index (BMI) to assess if your weight is healthy relative to your height.
+                </p>
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg">
+                    <div class="grid grid-cols-1 gap-6 mb-8">
+                        <div>
+                            <label for="bmi-weight"
+                                class="block text-left text-gray-700 text-sm font-bold mb-2">Weight:</label>
+                            <div class="flex items-center">
+                                <input type="number" id="bmi-weight"
+                                    class="shadow appearance-none border rounded-l-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                    placeholder="e.g., 70" min="1">
+                                <select id="bmi-weight-unit"
+                                    class="shadow border rounded-r-lg py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="bmi-height"
+                                class="block text-left text-gray-700 text-sm font-bold mb-2">Height:</label>
+                            <div class="flex items-center">
+                                <input type="number" id="bmi-height"
+                                    class="shadow appearance-none border rounded-l-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                    placeholder="e.g., 175" min="1">
+                                <select id="bmi-height-unit"
+                                    class="shadow border rounded-r-lg py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                    <option value="cm">cm</option>
+                                    <option value="inches">inches</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="calculate-bmi-button"
+                        class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                        Calculate BMI <i class="fas fa-calculator ml-3"></i>
+                    </button>
+
+                    <div id="bmi-output" class="mt-12 text-left">
+                        <p id="bmi-result" class="text-2xl font-bold text-gray-900 text-center hidden"></p>
+                        <p id="bmi-category" class="text-lg text-gray-700 text-center mt-2 hidden"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ideal-weight-calculator" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Find Your Ideal Weight</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Calculate a healthy weight range based on your height, gender, and age, using established formulas.
+                </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="grid grid-cols-1 gap-6 mb-8">
+                        <div>
+                            <label for="ideal-height"
+                                class="block text-left text-gray-700 text-sm font-bold mb-2">Height:</label>
+                            <div class="flex items-center">
+                                <input type="number" id="ideal-height"
+                                    class="shadow appearance-none border rounded-l-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                    placeholder="e.g., 175" min="1">
+                                <select id="ideal-height-unit"
+                                    class="shadow border rounded-r-lg py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                    <option value="cm">cm</option>
+                                    <option value="inches">inches</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ideal-gender"
+                                class="block text-left text-gray-700 text-sm font-bold mb-2">Gender:</label>
+                            <select id="ideal-gender"
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ideal-age"
+                                class="block text-left text-gray-700 text-sm font-bold mb-2">Age:</label>
+                            <input type="number" id="ideal-age"
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                placeholder="e.g., 30" min="18" max="100">
+                        </div>
+                    </div>
+                    <button id="calculate-ideal-weight-button"
+                        class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                        Calculate Ideal Weight <i class="fas fa-weight-hanging ml-3"></i>
+                    </button>
+
+                    <div id="ideal-weight-output" class="mt-12 text-left">
+                        <p id="ideal-weight-result" class="text-2xl font-bold text-gray-900 text-center hidden"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Blog: Deep Dives into
+                    Science-Backed Health</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                    Explore our latest articles on metabolism, hormonal weight gain, diet myths, and sustainable fat
+                    loss strategies. Empower yourself with knowledge!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/F0F0F0/333333?text=Metabolism+Boost"
+                            alt="Metabolism Boost" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900">Decoding Your Metabolism: How to Boost
+                                It Naturally</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn the true science behind metabolic rate and
+                                practical steps to optimize it for fat loss.</p>
+                            <a href="#"
+                                class="text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center">
+                                Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/F0F0F0/333333?text=Hormone+Balance" alt="Hormone Balance"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900">Hormones & Weight Gain: What You Need
+                                to Know</h3>
+                            <p class="text-gray-600 text-sm mb-4">Explore the critical role hormones play in fat storage
+                                and how to achieve hormonal balance.</p>
+                            <a href="#"
+                                class="text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center">
+                                Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/F0F0F0/333333?text=Diet+Myths" alt="Diet Myths"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900">Busting Common Diet Myths: The Truth
+                                About Fat Loss</h3>
+                            <p class="text-gray-600 text-sm mb-4">Separate fact from fiction and learn why popular diet
+                                fads often fail for long-term results.</p>
+                            <a href="#"
+                                class="text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center">
+                                Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#"
+                        class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">View
+                        All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-left">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="accordion-header" data-accordion-toggle>
+                            <span class="text-lg">Will I have to give up carbs completely?</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="py-4">No! Our approach focuses on balanced nutrition, not deprivation. We'll help
+                                you understand how to incorporate carbohydrates smartly into your diet for energy and
+                                metabolic health, without hindering your weight loss goals.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="accordion-header" data-accordion-toggle>
+                            <span class="text-lg">I have PCOS—will this still work for me?</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="py-4">Absolutely. Many of our clients have PCOS, and our science-backed strategies
+                                are specifically designed to address hormonal imbalances and insulin sensitivity often
+                                associated with PCOS, leading to sustainable weight loss and improved symptoms.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="accordion-header" data-accordion-toggle>
+                            <span class="text-lg">Is this just another restrictive diet plan?</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="py-4">Definitely not. We focus on education and building sustainable habits rather
+                                than temporary restrictions. Our goal is to empower you with knowledge and tools to make
+                                informed choices for life, fostering a healthy relationship with food and your body.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="accordion-header" data-accordion-toggle>
+                            <span class="text-lg">How quickly can I expect to see results?</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="py-4">While individual results vary, our clients typically start seeing positive
+                                changes in energy, mood, and body composition within the first few weeks. Our focus is
+                                on sustainable progress, not just rapid weight loss, to ensure lasting results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-900 text-white py-16">
+            <div class="container mx-auto text-center px-4 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Transformation?</h2>
+                <p class="text-lg md:text-xl mb-8 opacity-90">
+                    Book a FREE 15-minute discovery call with Yashika to discuss your goals and see if FitWithYashika is
+                    the right fit for you. Limited spots available each week!
+                </p>
+                <a href="https://calendly.com/your-yashika-link" target="_blank"
+                    class="bg-yellow-500 text-gray-900 px-10 py-5 rounded-full text-xl font-semibold shadow-xl hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 inline-block">
+                    Book Your Free Discovery Call <i class="fas fa-calendar-alt ml-3"></i>
+                </a>
+                <p class="text-sm mt-6 opacity-80">Or, chat with us directly on WhatsApp: <a
+                        href="https://wa.me/1234567890" target="_blank" class="underline hover:text-yellow-300">Send a
+                        Message</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-6 md:mb-0">
+                <p class="text-lg font-semibold">FitWithYashika</p>
+                <p class="text-sm">&copy; 2025 All rights reserved.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i
+                        class="fab fa-youtube text-xl"></i></a>
+            </div>
+            <div class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        function showMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+
+        function hideMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        mobileMenuButton.addEventListener('click', showMobileMenu);
+        closeMobileMenuButton.addEventListener('click', hideMobileMenu);
+
+        // Hide mobile menu when a link inside it is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', hideMobileMenu);
+        });
+
+        // Accordion functionality for FAQ
+        document.querySelectorAll('[data-accordion-toggle]').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+
+                // Close other open accordions
+                document.querySelectorAll('.accordion-content.active').forEach(openContent => {
+                    if (openContent !== content) {
+                        openContent.classList.remove('active');
+                        openContent.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotate');
+                    }
+                });
+
+                // Toggle current accordion
+                content.classList.toggle('active');
+                icon.classList.toggle('rotate');
+            });
+        });
+
+        // BMI Calculator Logic
+        const bmiWeightInput = document.getElementById('bmi-weight');
+        const bmiWeightUnitSelect = document.getElementById('bmi-weight-unit');
+        const bmiHeightInput = document.getElementById('bmi-height');
+        const bmiHeightUnitSelect = document.getElementById('bmi-height-unit');
+        const calculateBmiButton = document.getElementById('calculate-bmi-button');
+        const bmiResultDisplay = document.getElementById('bmi-result');
+        const bmiCategoryDisplay = document.getElementById('bmi-category');
+
+        calculateBmiButton.addEventListener('click', () => {
+            let weight = parseFloat(bmiWeightInput.value);
+            let height = parseFloat(bmiHeightInput.value);
+            const weightUnit = bmiWeightUnitSelect.value;
+            const heightUnit = bmiHeightUnitSelect.value;
+
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                bmiResultDisplay.textContent = 'Please enter valid numbers.';
+                bmiResultDisplay.classList.remove('hidden');
+                bmiCategoryDisplay.classList.add('hidden');
+                return;
+            }
+
+            // Convert to metric (kg and meters) for calculation
+            if (weightUnit === 'lbs') {
+                weight *= 0.453592; // lbs to kg
+            }
+            if (heightUnit === 'inches') {
+                height *= 0.0254; // inches to meters
+            } else if (heightUnit === 'cm') {
+                height /= 100; // cm to meters
+            }
+
+            const bmi = weight / (height * height);
+            let category = '';
+
+            if (bmi < 18.5) {
+                category = 'Underweight';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                category = 'Normal weight';
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obesity';
+            }
+
+            bmiResultDisplay.textContent = `Your BMI: ${bmi.toFixed(2)}`;
+            bmiCategoryDisplay.textContent = `Category: ${category}`;
+            bmiResultDisplay.classList.remove('hidden');
+            bmiCategoryDisplay.classList.remove('hidden');
+        });
+
+        // Ideal Weight Calculator Logic
+        const idealHeightInput = document.getElementById('ideal-height');
+        const idealHeightUnitSelect = document.getElementById('ideal-height-unit');
+        const idealGenderSelect = document.getElementById('ideal-gender');
+        const idealAgeInput = document.getElementById('ideal-age');
+        const calculateIdealWeightButton = document.getElementById('calculate-ideal-weight-button');
+        const idealWeightResultDisplay = document.getElementById('ideal-weight-result');
+
+        calculateIdealWeightButton.addEventListener('click', () => {
+            let height = parseFloat(idealHeightInput.value);
+            const heightUnit = idealHeightUnitSelect.value;
+            const gender = idealGenderSelect.value;
+            const age = parseInt(idealAgeInput.value);
+
+            if (isNaN(height) || height <= 0 || isNaN(age) || age < 18) {
+                idealWeightResultDisplay.textContent = 'Please enter valid height (18+ years old).';
+                idealWeightResultDisplay.classList.remove('hidden');
+                return;
+            }
+
+            // Convert height to inches for Devine formula
+            if (heightUnit === 'cm') {
+                height /= 2.54; // cm to inches
+            }
+
+            let idealWeightKg = 0;
+            const baseHeightInches = 60; // 5 feet in inches
+
+            if (height < baseHeightInches) {
+                idealWeightResultDisplay.textContent = 'Ideal weight calculation for heights below 5 feet is less accurate with this formula.';
+                idealWeightResultDisplay.classList.remove('hidden');
+                return;
+            }
+
+            if (gender === 'male') {
+                idealWeightKg = 50 + 2.3 * (height - baseHeightInches);
+            } else { // female
+                idealWeightKg = 45.5 + 2.3 * (height - baseHeightInches);
+            }
+
+            idealWeightResultDisplay.textContent = `Your Ideal Weight: ${idealWeightKg.toFixed(2)} kg (${(idealWeightKg * 2.20462).toFixed(2)} lbs)`;
+            idealWeightResultDisplay.classList.remove('hidden');
+        });
+    </script>
+</body>
+
+</html>
